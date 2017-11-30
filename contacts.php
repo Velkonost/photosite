@@ -37,6 +37,11 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="css/carousel.css"> <!-- CSS reset -->
     <script src="js/carousel/modernizr.js"></script> <!-- Modernizr -->
+    <style type="text/css">
+     * {
+      font-family: sans-serif !important;
+    }
+</style>
 </head>
 
 <body class="logged-out scroll-up" style="background: #ffffff">
@@ -101,7 +106,7 @@
             <div class="b-contacts__item">
                 <div class="b-contacts__top-flex">
                     <div class="b-contacts__avatar">
-                        <img src="/img/avatar-1.jpg" alt="" style="background: rgb(204, 204, 204);">
+                        <img src="/img/klimenko.png" alt="" style="background: rgb(204, 204, 204);">
                     </div> 
                     <div class="b-contacts__info">
                         <div class="b-contacts__name">Артём Клименко</div> 
@@ -119,7 +124,7 @@
             <div class="b-contacts__item">
                 <div class="b-contacts__top-flex">
                     <div class="b-contacts__avatar">
-                        <img src="/img/avatar-1.jpg" alt="" style="background: rgb(204, 204, 204);">
+                        <img src="/img/yurin.png" alt="" style="background: rgb(204, 204, 204);">
                     </div> 
                     <div class="b-contacts__info">
                         <div class="b-contacts__name">Андрей Юрин</div> 
@@ -137,7 +142,7 @@
             <div class="b-contacts__item">
                 <div class="b-contacts__top-flex">
                     <div class="b-contacts__avatar">
-                        <img src="/img/avatar-1.jpg" alt="" style="background: rgb(204, 204, 204);">
+                        <img src="/img/support.png" alt="" style="background: rgb(204, 204, 204);">
                     </div> 
                     <div class="b-contacts__info">
                         <div class="b-contacts__name">Служба поддержки</div> 

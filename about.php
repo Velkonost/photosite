@@ -37,6 +37,11 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="css/carousel.css"> <!-- CSS reset -->
     <script src="js/carousel/modernizr.js"></script> <!-- Modernizr -->
+    <style type="text/css">
+     * {
+      font-family: sans-serif !important;
+    }
+</style>
 </head>
 
 <body class="logged-out scroll-up" style="background: #ffffff">

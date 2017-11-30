@@ -20,6 +20,65 @@
     <script src="http://cdn.gophotoweb.com/saas-v2/prod/bruno/site/scripts/vendor/jquery-1.8.3.min.js?v=3.25.7.6"></script>
    
    <link rel="stylesheet" href="/css/index.css">
+   <style type="text/css">
+     * {
+      font-family: sans-serif !important;
+    }
+    .grid > .item {
+        margin: 0px;
+    }
+    .grid > .item img {
+        width: auto !important;
+        height: 135px;
+    }
+   /* .grid {
+        width: 830px;
+    }*/
+
+    /* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .grid {
+        width: 220px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .grid > .item {
+        margin: 1px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .grid {
+        width: 420px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .grid {
+        width: 420px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .grid {
+        width: 630px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .grid {
+        width: 840px;
+    }
+}
+
+a svg path {
+    fill: #171212;
+}
+</style>
    
 <!--  -->
 <div class="container"><div class="b-module b-module-best-shops">
@@ -36,14 +95,39 @@
                             </div> 
                             <div class="b-module-sidebar__title">Наши фотографы</div> 
                             <nav class="b-module-sidebar__nav">
+                                <img id="author_avatar" src="/" style="margin: 0 auto; margin-bottom: 30px">
                                 <ul class="b-module-sidebar__nav-list">
-                                    <li class="b-module-sidebar__nav-item filter active" data-filter="all"> Дарья Малетина (221) </li> 
-                                    <li class="b-module-sidebar__nav-item filter" data-filter=".category-1"> Дарья Малетина (221) </li> 
-                                    <li class="b-module-sidebar__nav-item filter" data-filter=".category-2"> Дарья Малетина (221) </li> 
-                                    <li class="b-module-sidebar__nav-item filter" data-filter=".category-3"> Дарья Малетина (221) </li> 
+                                    <li class="b-module-sidebar__nav-item filter active" data-filter="all" onclick="changePhoto(0)"> Все работы </li> 
+                                    <li class="b-module-sidebar__nav-item filter active" data-filter=".category-1" onclick="changePhoto(1)"> Дарья Малетина </li> 
+                                    <li class="b-module-sidebar__nav-item filter" data-filter=".category-2" onclick="changePhoto(2)"> Ангелина Трушина </li> 
+                                    <li class="b-module-sidebar__nav-item filter" data-filter=".category-3" onclick="changePhoto(3)"> Кирилл Бородин </li> 
+                                    <li class="b-module-sidebar__nav-item filter" data-filter=".category-4" onclick="changePhoto(4)"> Константин Воробьев </li> 
 
                                 </ul>
                             </nav>
+                            <script type="text/javascript">
+                                function changePhoto(id) {
+                                    var img = document.getElementById('author_avatar');
+                                    switch(id) {
+                                        case 0:
+                                            img.src = '/';
+                                            break;
+                                        case 1:
+                                            img.src = 'img/works/maletina/avatar.jpg';
+                                            break;
+                                        case 2:
+                                            img.src = 'img/works/trushina/avatar.jpg';
+                                            break;
+                                        case 3:
+                                            img.src = 'img/works/borodin/avatar.jpg';
+                                            break;
+                                        case 4:
+                                            img.src = 'img/works/vorobiev/avatar.jpg';
+                                            break;
+                                    }
+                                }
+
+                            </script>
                                      <div class="b-module-sidebar__show-all">
                                         <!-- <a href="/shops" title="Смотреть все" class="b-module-sidebar__show-all-link">Смотреть все</a> → -->
                                      </div>
@@ -54,35 +138,506 @@
                     <ul class="grid cs-style-5" style="visibility: visible;">
 
 
-                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
-                            <img src="img/001.jpg" class="scale thumb" style="width: 200px;" />
-                        </div>
-                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
-                            <img src="img/001.jpg" class="scale thumb" style="width: 200px;" />
-                        </div>
-                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
-                            <img src="img/001.jpg" class="scale thumb" style="width: 200px;" />
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/3.jpg" class="scale thumb" style="width: 200px;" />
                         </div>
                         <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
-                            <img src="img/001.jpg" class="scale thumb" style="width: 200px;" />
+                            <img src="img/works/maletina/4.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/15.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/5.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/8.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/9.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/16.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/17.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/18.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/19.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/3.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/21.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/22.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/24.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/27.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/28.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/29.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/5.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/30.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/31.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/32.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/9.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/33.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/11.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/35.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/36.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/9.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/37.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/38.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <!--  -->
+                        
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/6.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/2.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/3.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/7.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        
+                        <!--  -->
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/1.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/2.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/6.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/7.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/4.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/6.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/7.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/8.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        
+                         <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/14.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/15.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/10.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/12.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/13.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/10.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/13.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/14.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-3" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/borodin/16.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <!--  -->
+                        
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/11.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/12.jpg" class="scale thumb" style="width: 200px;" />
                         </div>
 
-                    
+                        <!--  -->
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/39.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/40.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/41.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/46.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/47.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/48.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/49.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <!--  -->
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/42.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/20.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                         <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/4.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/5.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/25.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-1" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/maletina/26.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/8.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/1.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-2" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/trushina/2.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <!--  -->
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/4.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/1.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/2.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/3.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/5.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/6.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/7.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/8.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/9.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/10.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+                        <div class="mix item portfolio_item category-4" style="display: inline-block;" data-fluid-grid-width="200" data-fluid-grid-height="720">
+                            <img src="img/works/vorobiev/11.jpg" class="scale thumb" style="width: 200px;" />
+                        </div>
+
                     </ul>
                 </div>
-                                <div class="fsbox">
-                                    <div class="container">
-                                        <div class="control close"><a id="fsboxClose" href="#" data-color="#313131" data-hover="#8c7f7f"></a></div>
-                                        <div class="slides-container">
-                                            <div class="slides">
-                                                <img alt="" src="data:image/gif," data-fsbox-src="img/001.jpg"/>
-                                            </div>
-                                            <div class="slides">
-                                                <img alt=""  src="data:image/gif," data-fsbox-src="img/002.jpg"/>
-                                            </div>
-                                        </div>
+                        <div class="fsbox">
+                            <div class="container">
+                                <div class="control close"><a id="fsboxClose" href="#" data-color="#171212" data-hover="#8c7f7f"></a></div>
+                                <div class="slides-container">
+                                    <div class="slides">
+                                        <img alt="" src="data:image/gif," data-fsbox-src="img/works/borodin/3.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/4.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/15.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/5.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/8.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/9.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/16.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/17.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/18.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/19.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/3.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/21.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/22.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/24.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/27.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/28.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/29.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/5.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/30.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/31.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/32.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/9.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/33.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/11.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/35.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/36.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/9.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/37.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/38.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/6.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/2.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/3.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/7.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/1.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/2.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/6.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/7.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/4.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/6.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/7.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/8.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/14.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/15.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/10.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/12.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/13.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/10.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/13.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/14.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/borodin/16.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/11.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/12.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/39.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/40.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/41.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/46.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/47.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/48.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/49.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/42.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/20.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/4.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/5.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/25.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/maletina/26.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/8.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/1.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/trushina/2.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/4.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/1.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/2.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/3.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/5.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/6.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/7.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/8.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/9.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/10.jpg"/>
+                                    </div>
+                                    <div class="slides">
+                                        <img alt=""  src="data:image/gif," data-fsbox-src="img/works/vorobiev/11.jpg"/>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
                             
                     </div>
                 </div>

@@ -37,6 +37,12 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="css/carousel.css"> <!-- CSS reset -->
     <script src="js/carousel/modernizr.js"></script> <!-- Modernizr -->
+
+    <style type="text/css">
+        * {
+            font-family: sans-serif !important;
+        }
+    </style>
 </head>
 
 <body class="logged-out scroll-up" style="background: #ffffff">
@@ -95,13 +101,15 @@
             <div class="b-banner-no-acc__title">Фото и видео услуги в Омске</div> <h1 class="b-banner-no-acc__text">Хотите найти надежного исполнителя по лучшей цене?</h1> <span class="b-banner-no-acc__text">Опытные фотографы готовы предложить Вам качественные услуги по доступным ценам в Омске и Омской области</span> 
             <div class="b-banner-no-acc__flex-wrap">
                 <!-- <div class="b-banner-no-acc__action-sing"><span class="b-button b-button--block b-button--large b-button--secondary-yellow">Вход</span></div>  -->
-            <div class="b-banner-no-acc__action-register"><span class="b-button b-button--block b-button--large b-button--secondary-yellow-out">Оставить заявку</span></div>
+                <a href="/price" style="text-decoration: none; color: black">
+            <div class="b-banner-no-acc__action-register"><span id="zayavka1" class="b-button b-button--block b-button--large b-button--secondary-yellow-out">Оставить заявку</span></div></a>
         </div></div></div> 
         <div class="b-banner-no-acc__right-s"><picture><source srcset="/img/photograph.png" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"> <img src="/img/photograph.png" class="img-man"></picture></div>
     </div>
          <div class="b-banner-no-acc__layout2"></div></div></div> <div class="b-banner-no-acc-mobile"><div class="layout1"><div class="bottom-s"><div class="flex-wrap" style="margin: 0">
-             
-<div class="b-banner-no-acc__action-register"><span class="b-button b-button--block b-button--large b-button--secondary-yellow-out">Оставить заявку</span></div>
+           
+<a href="/price" style="text-decoration: none; color: black">
+<div class="b-banner-no-acc__action-register"><span id="zayavka2" class="b-button b-button--block b-button--large b-button--secondary-yellow-out">Оставить заявку</span></div></a>
 
          </div></div></div> <div class="layout2"></div></div></div> <div class="container"><div class="b-module b-buy-to-cashback"><div class="b-buy-to-cashback__flex-wrap"><div class="b-buy-to-cashback__flex-item b-cashback-steep"><div class="b-cashback-steep__image"><a href="/shops" class="svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 104"><g fill="none" fill-rule="evenodd"><circle cx="51.861" cy="51.861" r="50.861" stroke="#EEE" stroke-width="2"></circle> <path fill="#FC0" d="M32.879 53.717l11.08 5.729 6.133 11.621 9.282-26.753z"></path> <path fill="#333" fill-rule="nonzero" d="M59.768 63.382c2.649-1.056 4.91-2.887 6.54-5.294a14.861 14.861 0 0 0 2.546-8.36c0-8.064-6.368-14.636-14.213-14.636-5.471 0-10.512 3.29-12.851 8.379a1 1 0 1 0 1.817.835c2.015-4.384 6.35-7.214 11.034-7.214 6.726 0 12.213 5.662 12.213 12.635 0 2.61-.761 5.11-2.202 7.24-1.406 2.076-3.35 3.65-5.625 4.557a1 1 0 1 0 .74 1.858z"></path> <path fill="#333" fill-rule="nonzero" d="M61.886 70.155c3.914-1.56 7.256-4.266 9.666-7.825 2.464-3.641 3.766-7.919 3.766-12.369 0-11.927-9.414-21.643-21.003-21.643-8.08 0-15.531 4.864-18.989 12.386a1 1 0 1 0 1.817.835c3.134-6.818 9.88-11.22 17.172-11.22 10.47 0 19.003 8.805 19.003 19.642 0 4.052-1.183 7.94-3.422 11.248-2.186 3.229-5.21 5.678-8.75 7.089a1 1 0 0 0 .74 1.857z"></path> <path fill="#333" fill-rule="nonzero" d="M43.882 60.65l6.045 12.006c.403.8 1.574.708 1.846-.146l8.955-28.072a1 1 0 0 0-1.257-1.257l-28.507 9.082c-.872.278-.943 1.485-.11 1.863l9.108 4.138a1 1 0 0 0 .827-1.821l-6.742-3.063 24.187-7.706-7.622 23.895-5.564-11.051a1 1 0 0 0-1.6-.26L29.47 72.184A1 1 0 1 0 30.88 73.6l13.001-12.95z"></path></g></svg></a></div> <div class="b-cashback-steep__caption"><div class="b-cashback-steep__title">
                 Быстрый заказ
@@ -125,10 +133,11 @@
                     <h2 class="b-page-title b-page-title--size-big b-page-title--center">5 отличных фотографов</h2> 
 </div> </div>
   <!--  -->
-<iframe src="galery_index.php" width="90%" height="520" frameBorder="0"></iframe>
+<iframe src="galery_index.php" width="90%" height="520" frameBorder="0" style="margin-bottom: 20px"></iframe>
 <section>
  <div class="b-banner-no-acc__flex-wrap">
-<div class="b-banner-no-acc__action-register" style="width: 360px; margin: 0 auto;margin-bottom:15px "><span class="b-button b-button--block b-button--large b-button--secondary-yellow-out">Оставить заявку</span></div></div>
+    <a href="/price" style="text-decoration: none; color: black">
+<div class="b-banner-no-acc__action-register" style="width: 360px; margin: 0 auto;margin-bottom:15px "><span class="b-button b-button--block b-button--large b-button--secondary-yellow-out" id="zayavka3">Оставить заявку</span></div></a></div>
 </section>
 
     <div class="container-full"><div class="b-module"><div class="b-module-statistics"><div class="b-page-title b-page-title--white b-page-title--center">EasyPhoto в числах</div> <div class="b-module-statistics__info"><div class="b-module-statistics__info-item"><div class="b-module-statistics__label">Фотографов</div> <div class="b-module-statistics__value"><span class="b-module-statistics__number">5</span> <span class="b-module-statistics__text"></span></div></div> <div class="b-module-statistics__info-item"><div class="b-module-statistics__label">Довольных клиентов</div> <div class="b-module-statistics__value"><a href="#" class="link-inverse b-module-statistics__number">54</a></div></div></div></div></div></div>
@@ -355,7 +364,7 @@
 
  
     
-    
+
 
 <script src="js/carousel/jquery-2.1.1.js"></script>
 <script src="js/carousel/masonry.pkgd.min.js"></script>
